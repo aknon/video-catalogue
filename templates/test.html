@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+var total = 0
+var total3 = 0
+$( "li" ).each(function( index ) {
+ if ( index < 3) {
+  total3 = total3 + $(this).outerWidth()
+ }
+ total = total + $(this).outerWidth()
+ 
+  
+});
+console.log("Total = " + total)
+console.log("Total 3 = " + total3)
+
+  $("button").click(function(){
+    $(".test").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2 class="test">This is a heading</h2>
+
+<p class="test">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+
+<ul>
+  <li>foo</li>
+  <li>bar</li>
+  <li>bar1</li>
+  <li>bar2</li>
+  <li>bar3</li>
+  <li>bar4</li>
+</ul>
+
+</body>
+</html>

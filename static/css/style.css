@@ -1,0 +1,44 @@
+h1 {
+    border: 2px #eee solid;
+    color: brown;
+    text-align: center;
+    padding: 10px;
+}
+
+/* General video container styling */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Video player styling (adjust based on your video player) */
+.video-container iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* View count styling */
+.video-stats .views {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* Like count styling */
+.video-stats .likes {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #000000;
+}
+
+/* Optional icon styling for likes */
+.like-icon {
+  margin-right: 5px;
+  color: #ffcc00; /* Example like color */
+}

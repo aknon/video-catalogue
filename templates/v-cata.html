@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+<h1>{% block title %} Saana Video Catalogue {% endblock %}</h1>
+
+{% block content %}
+    {% for channel_details in channels_details %}
+    <div>
+    <h2><p> {{ channel_details.get('title') }} </p></h2>
+    <p> {{ channel_details.get('description') }} </p>
+</div>
+
+    {% for video_details in channel_details.get('videos_details') %}
+    <div class="video-container">
+    <!-- <iframe src="https://www.youtube.com/embed/{{ video_details['video_id'] }}" frameborder='0' 
+        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in- 
+        picture' allowfullscreen></iframe> -->
+    
+    <iframe src="https://www.youtube.com/embed/{{ video_details.get('video_id') }}?ecver=2&enablejsapi=1" frameborder='0' 
+        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' ></iframe> 
+    
+    </div>
+    <div class="video-stats">
+    <span id="views" class="views"> {{ video_details.get('views') }} views</span>
+    <span id="likes" class="likes"><i class="likes-icon"></i> {{ video_details.get('likes') }} likes</span>
+</div>
+        
+    {% endfor %}
+    {% endfor %}
+{% endblock %}

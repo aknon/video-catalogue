@@ -1,0 +1,37 @@
+ #outer {
+   float: left;
+   width: 250px;
+   overflow: hidden;
+   white-space: nowrap;
+   display: inline-block;
+ }
+ 
+ #left-button {
+   float: left;
+   width: 30px;
+   text-align: center;
+ }
+ 
+ #right-button {
+   float: left;
+   width: 30px;
+   text-align: center;
+ }
+ 
+ a {
+   text-decoration: none;
+   font-weight: bolder;
+   color: red;
+ }
+ 
+ #inner:first-child {
+   margin-left: 0;
+ }
+ 
+ label {
+   margin-left: 10px;
+ }
+ 
+ .hide {
+   display: none;
+ }
